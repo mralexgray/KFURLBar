@@ -28,7 +28,7 @@
 #import "KFURLBar.h"
 #import "KFWebKitProgressController.h"
 
-#import <WebKit/WebKit.h>
+#import <WebKit/WebView.h>
 
 @interface AppDelegate () <KFURLBarDelegate, NSWindowDelegate, KFWebKitProgressDelegate>
 
@@ -96,7 +96,7 @@
 
 - (void)updateProgress
 {
-    self.urlBar.progressPhase = KFProgressPhaseDownloading;
+    self.urlBar.progressPhase = KFProgDownloading;
     self.progress += .005;
     self.urlBar.progress = self.progress;
     if (self.progress < 1.0)
@@ -105,7 +105,7 @@
     }
     else
     {
-        self.urlBar.progressPhase = KFProgressPhaseNone;
+        self.urlBar.progressPhase = KFProgNone;
     }
 }
 
@@ -116,7 +116,7 @@
 - (void)urlBar:(KFURLBar *)urlBar didRequestURL:(NSURL *)url
 {
     [[self.webView mainFrame] loadRequest:[[NSURLRequest alloc] initWithURL:url]];
-    self.urlBar.progressPhase = KFProgressPhasePending;
+    self.urlBar.progressPhase = KFProgPending;
 }
 
 
@@ -143,7 +143,7 @@
 
 - (void)webKitProgressDidChangeFinishedCount:(NSInteger)finishedCount ofTotalCount:(NSInteger)totalCount
 {
-    self.urlBar.progressPhase = KFProgressPhaseDownloading;
+    self.urlBar.progressPhase = KFProgDownloading;
     self.urlBar.progress = (float)finishedCount / (float)totalCount;
     
     if (totalCount == finishedCount)
@@ -154,7 +154,7 @@
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
         dispatch_after(popTime, dispatch_get_main_queue(), ^(void)
         {
-            weakSelf.urlBar.progressPhase = KFProgressPhaseNone;
+            weakSelf.urlBar.progressPhase = KFProgNone;
         });
     }
 }

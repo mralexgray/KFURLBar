@@ -26,7 +26,7 @@
 
 #import "KFWebKitProgressController.h"
 
-#import <WebKit/WebKit.h>
+#import <WebKit/WebView.h>
 
 
 @interface KFWebKitProgressController ()
