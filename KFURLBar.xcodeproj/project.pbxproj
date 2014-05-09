@@ -8,23 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		1D1706AC16EA342F008920CC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1706AB16EA342F008920CC /* Cocoa.framework */; };
-		1D1706B616EA342F008920CC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D1706B416EA342F008920CC /* InfoPlist.strings */; };
 		1D1706B816EA342F008920CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1706B716EA342F008920CC /* main.m */; };
-		1D1706BC16EA342F008920CC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1D1706BA16EA342F008920CC /* Credits.rtf */; };
 		1D1706BF16EA342F008920CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1706BE16EA342F008920CC /* AppDelegate.m */; };
 		1D1706C216EA342F008920CC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D1706C016EA342F008920CC /* MainMenu.xib */; };
-		1D1706CE16EA3680008920CC /* KFURLBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1706CD16EA3680008920CC /* KFURLBar.m */; };
-		1D1706D416EAA49F008920CC /* KFURLFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1706D316EAA49F008920CC /* KFURLFormatter.m */; };
 		1D200A5F17FD7FB5005B6D60 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D200A5E17FD7FB5005B6D60 /* WebKit.framework */; };
-		1D42C73117FEE309009E0EAD /* KFWebKitProgressController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D42C73017FEE309009E0EAD /* KFWebKitProgressController.m */; };
+		7B4A2DA9191C6DA100E20A3A /* KFWebKitProgressController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D42C72F17FEE309009E0EAD /* KFWebKitProgressController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B4A2DAB191CBF9A00E20A3A /* KFURLBar_Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4A2DAA191CBF9A00E20A3A /* KFURLBar_Private.m */; };
+		7B4A2DAE191CC19500E20A3A /* KFURLBar_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B4A2DAC191CBFF600E20A3A /* KFURLBar_Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		7B4A2DAF191CC20B00E20A3A /* libKFURLBar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B6996301819533F00CAD9E2 /* libKFURLBar.a */; };
 		7B6996311819533F00CAD9E2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1706AB16EA342F008920CC /* Cocoa.framework */; };
 		7B6996521819536900CAD9E2 /* KFURLBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1706CC16EA3680008920CC /* KFURLBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7B6996531819537300CAD9E2 /* KFWebKitProgressController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D42C73017FEE309009E0EAD /* KFWebKitProgressController.m */; };
 		7B6996541819537300CAD9E2 /* KFURLBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1706CD16EA3680008920CC /* KFURLBar.m */; };
 		7B6996551819537300CAD9E2 /* KFURLFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1706D316EAA49F008920CC /* KFURLFormatter.m */; };
 		7B6996561819538000CAD9E2 /* KFURLFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1706D216EAA49F008920CC /* KFURLFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7B6996571819538300CAD9E2 /* KFWebKitProgressController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D42C72F17FEE309009E0EAD /* KFWebKitProgressController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7B4A2DB0191CC23500E20A3A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D1706A016EA342F008920CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B69962F1819533F00CAD9E2;
+			remoteInfo = KFURLBar;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1D1706A816EA342F008920CC /* KFURLBarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KFURLBarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +54,9 @@
 		1D200A5E17FD7FB5005B6D60 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		1D42C72F17FEE309009E0EAD /* KFWebKitProgressController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KFWebKitProgressController.h; path = KFURLBar/KFWebKitProgressController.h; sourceTree = "<group>"; };
 		1D42C73017FEE309009E0EAD /* KFWebKitProgressController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KFWebKitProgressController.m; path = KFURLBar/KFWebKitProgressController.m; sourceTree = "<group>"; };
+		7B4A2DAA191CBF9A00E20A3A /* KFURLBar_Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KFURLBar_Private.m; path = KFURLBar/Sources/KFURLBar_Private.m; sourceTree = "<group>"; };
+		7B4A2DAC191CBFF600E20A3A /* KFURLBar_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KFURLBar_Private.h; path = KFURLBar/Sources/KFURLBar_Private.h; sourceTree = "<group>"; };
+		7B4A2DB2191CC2A900E20A3A /* Mac-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Mac-StaticLibrary.xcconfig"; path = "/Volumes/2T/ServiceData/AtoZ.framework/Frameworks/AtoZAutoBox/../../xcconfigs/Mac OS X/Mac-StaticLibrary.xcconfig"; sourceTree = "<absolute>"; };
 		7B6996301819533F00CAD9E2 /* libKFURLBar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKFURLBar.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B6996351819533F00CAD9E2 /* KFURLBar-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KFURLBar-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B4A2DAF191CC20B00E20A3A /* libKFURLBar.a in Frameworks */,
 				1D200A5F17FD7FB5005B6D60 /* WebKit.framework in Frameworks */,
 				1D1706AC16EA342F008920CC /* Cocoa.framework in Frameworks */,
 			);
@@ -74,10 +86,13 @@
 		1D17069F16EA342F008920CC = {
 			isa = PBXGroup;
 			children = (
+				7B4A2DB2191CC2A900E20A3A /* Mac-StaticLibrary.xcconfig */,
 				1D42C72F17FEE309009E0EAD /* KFWebKitProgressController.h */,
 				1D42C73017FEE309009E0EAD /* KFWebKitProgressController.m */,
 				1D1706CC16EA3680008920CC /* KFURLBar.h */,
 				1D1706CD16EA3680008920CC /* KFURLBar.m */,
+				7B4A2DAC191CBFF600E20A3A /* KFURLBar_Private.h */,
+				7B4A2DAA191CBF9A00E20A3A /* KFURLBar_Private.m */,
 				1D1706D216EAA49F008920CC /* KFURLFormatter.h */,
 				1D1706D316EAA49F008920CC /* KFURLFormatter.m */,
 				7B6996341819533F00CAD9E2 /* Supporting Files */,
@@ -157,8 +172,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B6996521819536900CAD9E2 /* KFURLBar.h in Headers */,
+				7B4A2DA9191C6DA100E20A3A /* KFWebKitProgressController.h in Headers */,
 				7B6996561819538000CAD9E2 /* KFURLFormatter.h in Headers */,
-				7B6996571819538300CAD9E2 /* KFWebKitProgressController.h in Headers */,
+				7B4A2DAE191CC19500E20A3A /* KFURLBar_Private.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +192,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B4A2DB1191CC23500E20A3A /* PBXTargetDependency */,
 			);
 			name = KFURLBarDemo;
 			productName = KFURLBar;
@@ -231,8 +248,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D1706B616EA342F008920CC /* InfoPlist.strings in Resources */,
-				1D1706BC16EA342F008920CC /* Credits.rtf in Resources */,
 				1D1706C216EA342F008920CC /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,9 +261,6 @@
 			files = (
 				1D1706B816EA342F008920CC /* main.m in Sources */,
 				1D1706BF16EA342F008920CC /* AppDelegate.m in Sources */,
-				1D42C73117FEE309009E0EAD /* KFWebKitProgressController.m in Sources */,
-				1D1706CE16EA3680008920CC /* KFURLBar.m in Sources */,
-				1D1706D416EAA49F008920CC /* KFURLFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,12 +269,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B6996531819537300CAD9E2 /* KFWebKitProgressController.m in Sources */,
+				7B4A2DAB191CBF9A00E20A3A /* KFURLBar_Private.m in Sources */,
 				7B6996541819537300CAD9E2 /* KFURLBar.m in Sources */,
 				7B6996551819537300CAD9E2 /* KFURLFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7B4A2DB1191CC23500E20A3A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B69962F1819533F00CAD9E2 /* KFURLBar */;
+			targetProxy = 7B4A2DB0191CC23500E20A3A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1D1706B416EA342F008920CC /* InfoPlist.strings */ = {
@@ -298,6 +319,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -321,6 +343,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				WARNING_CFLAGS = "-Wno-objc-protocol-method-implementation";
 			};
 			name = Debug;
 		};
@@ -330,6 +353,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -346,6 +370,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
+				WARNING_CFLAGS = "-Wno-objc-protocol-method-implementation";
 			};
 			name = Release;
 		};
@@ -356,6 +381,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KFURLBar/KFURLBar-Prefix.pch";
 				INFOPLIST_FILE = "KFURLBar/KFURLBar-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = x86_64;
 				WRAPPER_EXTENSION = app;
@@ -369,6 +395,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KFURLBar/KFURLBar-Prefix.pch";
 				INFOPLIST_FILE = "KFURLBar/KFURLBar-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = x86_64;
 				WRAPPER_EXTENSION = app;
@@ -377,6 +404,7 @@
 		};
 		7B69964D1819534000CAD9E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B4A2DB2191CC2A900E20A3A /* Mac-StaticLibrary.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -390,6 +418,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
+				GENERATE_MASTER_OBJECT_FILE = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = include/$PRODUCT_NAME;
 			};
@@ -397,6 +426,7 @@
 		};
 		7B69964E1819534000CAD9E2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B4A2DB2191CC2A900E20A3A /* Mac-StaticLibrary.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -407,6 +437,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
+				GENERATE_MASTER_OBJECT_FILE = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = include/$PRODUCT_NAME;
 			};

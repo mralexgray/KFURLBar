@@ -1,18 +1,26 @@
-#import <Cocoa/Cocoa.h>
+//@property (nonatomic,weak) NSString * addressString;
+
+@import Cocoa;
+@class WebView;
 
 typedef NS_ENUM(int, KFProgPhase) { KFProgNone,  KFProgPending,  KFProgDownloading};
 
-typedef void (^StringBlock)     (NSString*req);
-typedef BOOL (^URLValidator) (NSString*isV);
+typedef void (^StringBlock)   (NSString*req);
+typedef BOOL (^URLValidator)  (NSString*isV);
+typedef void (^ProgressBlock) (NSInteger done, NSInteger total);
 
 @interface KFURLBar : NSView
 
-@property (copy)        StringBlock   didRequestURL;
+@property (copy)        StringBlock   didRequestURL;  /*!*/   // do THIS when hit enter!
+@property (nonatomic,weak)  WebView * webview;        /*!*/
+
+@property (copy)      ProgressBlock   progressUpdated; // defaults to automatic!
 @property (copy)       URLValidator   urlValidator;
+
 @property (nonatomic)        double   progress;
 @property (nonatomic)   KFProgPhase   progressPhase;
 @property (nonatomic)       CGFloat   cornerRadius;
-//@property (nonatomic,weak) NSString * addressString;
+@property (nonatomic)      NSString * addressString;
 @property (nonatomic)       NSColor * gradientColorTop,
                                     * gradientColorBottom,
                                     * borderColorTop,
@@ -20,16 +28,20 @@ typedef BOOL (^URLValidator) (NSString*isV);
                                     * barColorPendingTop,
                                     * barColorPendingBottom,
                                     * barColorDownloadingTop,
-                                    * barColorDownloadingBottom,
-                                    * addressString;
+                                    * barColorDownloadingBottom;
 
-@property (nonatomic) NSArray *leftItems, *rightItems;
+- (void) addItem:(id)b edge:(CGRectEdge)e;
 
-+ (instancetype)instanceWithRequestBlock:(StringBlock)b;
+@property (readonly)       NSButton * reloadButton;
 
 - (void) setDidRequestURL:(StringBlock)b;
 - (void)  setUrlValidator:(URLValidator)b;
 
+@end
+
+@interface KFURLBar (Convenience)
+
++ (instancetype) instanceWithRequestBlock:(StringBlock)b;
 @end
 
 
